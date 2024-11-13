@@ -78,15 +78,16 @@
             const maxY = window.innerHeight - noButton.offsetHeight;  // Alto máximo para mover el botón
             const randomX = Math.random() * maxX;
             const randomY = Math.random() * maxY;
+            noButton.style.position = "absolute";
             noButton.style.left = `${randomX}px`;
             noButton.style.top = `${randomY}px`;
         });
 
         // Cuando el usuario hace clic en "Sí", ocultamos todo y mostramos solo el mensaje
         yesButton.addEventListener("click", function() {
-            // Ocultar todo: los botones y los mensajes anteriores
-            initialContainer.classList.add("hidden");
-            loveMessageContainer.classList.remove("hidden");
+            // Ocultar el contenedor de botones y mostrar el mensaje
+            initialContainer.style.display = "none";  // Oculta los botones
+            loveMessageContainer.style.display = "flex";  // Muestra el mensaje
         });
     </script>
 
