@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Quieres ser mi novia?</title>
+    <title>Mar, ¿te gustaría que construyamos algo hermoso juntos?</title>
     <style>
         body {
             display: flex;
@@ -17,10 +17,14 @@
         h1 {
             color: #ff1493;
             font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px; /* Espacio entre botones */
         }
         button {
             padding: 10px 20px;
-            margin: 10px;
             font-size: 1.2em;
             cursor: pointer;
         }
@@ -28,23 +32,25 @@
 </head>
 <body>
 
-    <h1>¿Quieres ser mi novia? ❤️</h1>
-    <button id="yesButton">Sí</button>
-    <button id="noButton">No</button>
+    <h1>Mari, ¿te gustaría que construyamos algo hermoso juntos? ❤️</h1>
+    <div class="button-container">
+        <button id="yesButton">Sí</button>
+        <button id="noButton">No</button>
+    </div>
 
     <script>
         const noButton = document.getElementById("noButton");
 
         noButton.addEventListener("mouseover", function() {
-            const x = Math.random() * window.innerWidth * 0.8;
-            const y = Math.random() * window.innerHeight * 0.8;
+            const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
             noButton.style.position = "absolute";
-            noButton.style.left = ${x}px;
-            noButton.style.top = ${y}px;
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
         });
 
         document.getElementById("yesButton").addEventListener("click", function() {
-            alert("¡Sabía que dirías que sí! ❤️");
+            alert("Sabía que no te resistirías, Mar. ¡Te quiero mucho! ❤️");
         });
     </script>
 
