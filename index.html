@@ -82,9 +82,9 @@
             noButton.style.top = `${randomY}px`;
         });
 
-        // Cuando el usuario hace clic en "Sí", se muestra el mensaje de "Te quiero"
+        // Cuando el usuario hace clic en "Sí", ocultamos todo y mostramos solo el mensaje
         yesButton.addEventListener("click", function() {
-            // Ocultar los botones y mostrar el mensaje
+            // Ocultar todo: los botones y los mensajes anteriores
             initialContainer.classList.add("hidden");
             loveMessageContainer.classList.remove("hidden");
         });
