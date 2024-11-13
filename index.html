@@ -23,7 +23,7 @@
         }
         .button-container {
             display: flex;
-            gap: 30px; /* Espacio entre los botones */
+            gap: 50px; /* Espacio mayor entre los botones */
         }
         button {
             padding: 10px 20px;
@@ -72,8 +72,8 @@
         const initialContainer = document.getElementById("initialContainer");
         const loveMessageContainer = document.getElementById("loveMessageContainer");
 
-        // Cuando el ratón pasa sobre el botón "No", se mueve a una nueva posición aleatoria
-        noButton.addEventListener("mouseover", function() {
+        // Cuando el usuario hace clic en "No", se mueve a una nueva posición aleatoria
+        noButton.addEventListener("click", function() {
             const maxX = window.innerWidth - noButton.offsetWidth;  // Ancho máximo para mover el botón
             const maxY = window.innerHeight - noButton.offsetHeight;  // Alto máximo para mover el botón
             const randomX = Math.random() * maxX;
