@@ -7,34 +7,31 @@
     <style>
         body {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             background-color: #ffe4e1;
             font-family: Arial, sans-serif;
             margin: 0;
-            overflow: hidden; /* Para evitar que los botones salgan de la pantalla */
+            overflow: hidden;
         }
         h1 {
             color: #ff1493;
             font-size: 2em;
             margin-bottom: 20px;
+            text-align: center;
         }
         .button-container {
             display: flex;
-            gap: 50px; /* Espacio mayor entre los botones */
+            gap: 50px; /* Mayor espacio entre botones */
         }
         button {
             padding: 10px 20px;
             font-size: 1.2em;
             cursor: pointer;
-            position: relative; /* Esto permite mover el botón */
-        }
-        .hidden {
-            display: none; /* Oculta el contenido cuando sea necesario */
         }
         .message {
+            display: none; /* Oculta el mensaje inicialmente */
             text-align: center;
             font-size: 2.5em;
             color: #ff1493;
@@ -43,16 +40,12 @@
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
     </style>
 </head>
 <body>
 
-    <div class="container" id="initialContainer">
+    <!-- Contenedor inicial con el título y los botones -->
+    <div id="initialContainer">
         <h1>Mari, ¿te gustaría que construyamos algo hermoso juntos? ❤️</h1>
         <div class="button-container">
             <button id="yesButton">Sí</button>
@@ -60,10 +53,9 @@
         </div>
     </div>
 
-    <div class="container hidden" id="loveMessageContainer">
-        <div class="message">
-            Sabía que no te resistirías, Mar. ¡Te quiero mucho! ❤️
-        </div>
+    <!-- Contenedor del mensaje de amor que se muestra al hacer clic en "Sí" -->
+    <div id="loveMessageContainer" class="message">
+        Sabía que no te resistirías, Mar. ¡Te quiero mucho! ❤️
     </div>
 
     <script>
