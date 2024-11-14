@@ -86,8 +86,8 @@
         // Cuando el usuario hace clic en "Sí", ocultamos todo y mostramos solo el mensaje
         yesButton.addEventListener("click", function() {
             // Ocultar el contenedor de botones y mostrar el mensaje
-            initialContainer.style.display = "none";  // Oculta los botones
-            loveMessageContainer.style.display = "flex";  // Muestra el mensaje
+            initialContainer.classList.add("hidden"); // Oculta los botones
+            loveMessageContainer.classList.remove("hidden"); // Muestra el mensaje
         });
     </script>
 
