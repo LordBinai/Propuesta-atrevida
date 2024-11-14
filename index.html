@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mar, ¿te gustaría que construyamos algo hermoso juntos?</title>
     <style>
+        /* Contenedor principal de la página */
         body {
             display: flex;
             justify-content: center;
@@ -15,25 +16,36 @@
             margin: 0;
             overflow: hidden;
         }
+        /* Contenedor inicial que contiene el título y los botones */
+        #initialContainer, #loveMessageContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+        /* Estilo del título */
         h1 {
             color: #ff1493;
             font-size: 2em;
-            margin-bottom: 20px;
-            text-align: center;
+            margin: 0;
         }
+        /* Contenedor para los botones "Sí" y "No" */
         .button-container {
             display: flex;
             gap: 50px; /* Mayor espacio entre botones */
         }
+        /* Estilo de los botones */
         button {
             padding: 10px 20px;
             font-size: 1.2em;
             cursor: pointer;
         }
+        /* Mensaje de amor oculto inicialmente */
         .message {
             display: none; /* Oculta el mensaje inicialmente */
-            text-align: center;
-            font-size: 2.5em;
+            font-size: 2em;
             color: #ff1493;
             background-color: #fff;
             padding: 20px;
