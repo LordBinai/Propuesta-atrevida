@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mar, ¿te gustaría que construyamos algo hermoso juntos?</title>
     <style>
-        /* Contenedor principal de la página */
+        /* Estilos generales para centrar todo en la pantalla */
         body {
             display: flex;
             justify-content: center;
@@ -16,8 +16,8 @@
             margin: 0;
             overflow: hidden;
         }
-        /* Contenedor inicial que contiene el título y los botones */
-        #initialContainer, #loveMessageContainer {
+        /* Estilos del contenedor inicial */
+        #initialContainer {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -31,7 +31,7 @@
             font-size: 2em;
             margin: 0;
         }
-        /* Contenedor para los botones "Sí" y "No" */
+        /* Contenedor para los botones */
         .button-container {
             display: flex;
             gap: 50px; /* Mayor espacio entre botones */
@@ -42,8 +42,8 @@
             font-size: 1.2em;
             cursor: pointer;
         }
-        /* Mensaje de amor oculto inicialmente */
-        .message {
+        /* Estilo del mensaje de amor, oculto inicialmente */
+        #loveMessageContainer {
             display: none; /* Oculta el mensaje inicialmente */
             font-size: 2em;
             color: #ff1493;
@@ -66,7 +66,7 @@
     </div>
 
     <!-- Contenedor del mensaje de amor que se muestra al hacer clic en "Sí" -->
-    <div id="loveMessageContainer" class="message">
+    <div id="loveMessageContainer">
         Sabía que no te resistirías, Mar. ¡Te quiero mucho! ❤️
     </div>
 
